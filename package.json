@@ -8,7 +8,8 @@
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
         "serve:ssr:notiki-ang": "node dist/notiki-ang/server/server.mjs",
-        "format": "bunx prettier --write \"src/**/*.{ts,html,css,scss}\""
+        "lint": "ng lint",
+        "format": "bunx prettier --write 'src/**/*.{ts,html,css,scss}'"
     },
     "private": true,
     "dependencies": {
@@ -20,33 +21,36 @@
         "@angular/platform-server": "^20.0.0",
         "@angular/router": "^20.0.0",
         "@angular/ssr": "^20.0.0",
-        "@typescript-eslint/eslint-plugin": "^8.33.1",
-        "@typescript-eslint/parser": "^8.33.1",
-        "angular-eslint": "^19.7.1",
-        "eslint": "^9.28.0",
-        "eslint-config-prettier": "^10.1.5",
-        "eslint-plugin-prettier": "^5.4.1",
         "express": "^5.1.0",
-        "prettier": "^3.5.3",
-        "prettier-eslint": "^16.4.2",
         "rxjs": "~7.8.0",
         "tslib": "^2.3.0",
-        "typescript-eslint": "^8.33.1",
         "zone.js": "~0.15.0"
     },
     "devDependencies": {
+        "@angular-eslint/eslint-plugin": "^19.7.1",
+        "@angular-eslint/eslint-plugin-template": "^19.7.1",
+        "@angular-eslint/schematics": "^19.7.1",
         "@angular/build": "^20.0.0",
         "@angular/cli": "^20.0.0",
         "@angular/compiler-cli": "^20.0.0",
         "@types/express": "^5.0.1",
         "@types/jasmine": "~5.1.0",
         "@types/node": "^20.17.19",
+        "@typescript-eslint/eslint-plugin": "^8.33.1",
+        "@typescript-eslint/parser": "^8.33.1",
+        "angular-eslint": "^19.7.1",
+        "eslint": "^9.28.0",
+        "eslint-config-prettier": "^10.1.5",
+        "eslint-plugin-prettier": "^5.4.1",
         "jasmine-core": "~5.7.0",
         "karma": "~6.4.0",
         "karma-chrome-launcher": "~3.2.0",
         "karma-coverage": "~2.2.0",
         "karma-jasmine": "~5.1.0",
         "karma-jasmine-html-reporter": "~2.1.0",
-        "typescript": "~5.8.2"
+        "prettier": "^3.5.3",
+        "prettier-eslint": "^16.4.2",
+        "typescript": "5.8.3",
+        "typescript-eslint": "^8.33.1"
     }
 }
