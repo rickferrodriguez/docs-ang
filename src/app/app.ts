@@ -1,9 +1,10 @@
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
+import { ContentNoteComponent } from "./features/content-note/content-note";
 
 @Component({
     selector: "app-root",
-    imports: [RouterOutlet],
+    imports: [RouterOutlet, ContentNoteComponent],
     templateUrl: "./app.html",
     styleUrl: "./app.css",
 })
