@@ -4,10 +4,10 @@ import { NOTES } from "../mocks/mock.notes";
 @Injectable({
     providedIn: "root",
 })
-export class NoteService {
+export class DataService {
     constructor() {}
 
-    getHeroes() {
+    getNotes() {
         return NOTES;
     }
 }

@@ -17,4 +17,9 @@
         id="texto"
         [value]="inputValue()"
         (input)="handleChange($event)" />
+    <ul>
+        @for (item of notes; track item.id) {
+            <li>{{ item.title }}</li>
+        }
+    </ul>
 </section>
