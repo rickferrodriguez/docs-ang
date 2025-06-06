@@ -11,17 +11,20 @@ import { ContentNoteComponent } from "./features/content-note/content-note";
 export class AppComponent {
     protected title = "notiki-ang richi flow";
     container = [
-        { title: "Explore the Docs", link: "https://angular.dev" },
+        { id: 0, title: "Explore the Docs", link: "https://angular.dev" },
         {
+            id: 1,
             title: "Learn with Tutorials",
             link: "https://angular.dev/tutorials",
         },
-        { title: "CLI Docs", link: "https://angular.dev/tools/cli" },
+        { id: 2, title: "CLI Docs", link: "https://angular.dev/tools/cli" },
         {
+            id: 3,
             title: "Angular Language Service",
             link: "https://angular.dev/tools/language-service",
         },
         {
+            id: 4,
             title: "Angular DevTools",
             link: "https://angular.dev/tools/devtools",
         },

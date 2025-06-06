@@ -1,16 +1,25 @@
-import { Component } from "@angular/core";
+import { Component, inject, signal } from "@angular/core";
+import { NoteService } from "../../core/services/note";
 
 @Component({
-    selector: "app-content-note",
+    selector: "[ app-content-note ]:not(button)",
     imports: [],
     templateUrl: "./content-note.html",
     styleUrl: "./content-note.css",
 })
 export class ContentNoteComponent {
-    buttonName = "Esto es un botón del content";
+    buttonName = signal("nombre??");
+    inputValue = signal("");
+    isValid = signal(false);
+    // en teoría esto va en privado pero no entiendo porque
+    private noteService = inject(NoteService);
 
-    handleChange(data: any) {
-        console.log("Change");
-        this.buttonName = data.target.value;
+    handleClick() {
+        this.buttonName.set("Presionado y deshabilitado");
+        this.isValid.set(true);
+    }
+
+    handleChange(e: any) {
+        this.inputValue.set(e.target.value);
     }
 }

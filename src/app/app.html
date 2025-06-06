@@ -7,13 +7,14 @@
         <div class="divider" role="separator" aria-label="Divider"></div>
         <div class="right-side">
             <div class="pill-group">
-                @for (item of container; track item.title) {
+                @for (item of container; track item.id; let e = $even) {
                     <a
                         class="pill"
                         [href]="item.link"
                         target="_blank"
                         rel="noopener">
                         <span>{{ item.title }}</span>
+                        <p>{{e}}</p>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="14"
@@ -26,7 +27,7 @@
                     </a>
                 }
             </div>
-            <app-content-note/>
+            <app-content-note />
         </div>
     </div>
 </main>

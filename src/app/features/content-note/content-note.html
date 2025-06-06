@@ -1,7 +1,20 @@
-<p>content-note works!</p>
-<button>{{ buttonName }}</button>
-<input
-    type="text"
-    name="nameChanger"
-    id="nameChanger"
-    (change)="handleChange($event)" />
+<section>
+    <p>{{ buttonName() }}</p>
+    <button
+        [class.isDisabled]="isValid()"
+        [disabled]="isValid()"
+        (click)="handleClick()">
+        Cambiar tag
+    </button>
+    @if (inputValue() === "") {
+        <p>No hay nada todavía</p>
+    } @else {
+        <p>{{ inputValue() }}</p>
+    }
+    <input
+        type="text"
+        name="texto"
+        id="texto"
+        [value]="inputValue()"
+        (input)="handleChange($event)" />
+</section>
