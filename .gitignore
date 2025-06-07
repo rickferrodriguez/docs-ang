@@ -41,7 +41,6 @@ testem.log
 .DS_Store
 Thumbs.db
 .env
-src/environments/environment.ts
 .env.local
 .DS_Store
 dist
@@ -50,3 +49,4 @@ dist-ssr
 /coverage
 /tmp
 lint-*
+src/environments/environment.ts
