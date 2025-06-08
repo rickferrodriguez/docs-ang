@@ -11,6 +11,7 @@ import {
     provideClientHydration,
     withEventReplay,
 } from "@angular/platform-browser";
+import { provideHttpClient, withFetch } from "@angular/common/http";
 
 export interface ApiToken {
     url: string;
@@ -20,6 +21,7 @@ export const API_TOKEN = new InjectionToken<ApiToken>("url api token");
 
 export const appConfig: ApplicationConfig = {
     providers: [
+        provideHttpClient(withFetch()),
         provideBrowserGlobalErrorListeners(),
         provideZoneChangeDetection({ eventCoalescing: true }),
         provideRouter(routes),

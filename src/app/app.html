@@ -5,7 +5,19 @@
             <p>Congratulations! Your app is running. 🎉</p>
         </div>
         <a href={{apiUrl.url}} target='_blank'>página de rickli</a>
+        @if (randomData | async; as user) {
+            <p>Name {{user.info.version}}</p>
+        }
         <div class="divider" role="separator" aria-label="Divider"></div>
+        <input type="text" [formControl]='mascota' placeholder="Template form">
+        <p>{{mascota.value}}</p>
+        <div class="divider" role="separator" aria-label="Divider"></div>
+        <input type="text" [(ngModel)]='favoriteColor' placeholder="Template form">
+        @if (favoriteColor === '') {
+            <p>Template form</p>
+        } @else {
+            <p>{{favoriteColor}}</p>
+        }
         <div class="right-side">
             <div class="pill-group">
                 @for (item of container; track item.id; let e = $even) {
