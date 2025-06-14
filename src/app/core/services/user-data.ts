@@ -12,4 +12,8 @@ export class UserData {
     getHeroes(): Observable<ResUserData> {
         return this.http.get<ResUserData>("https://randomuser.me/api/");
     }
+
+    getConsole() {
+        console.log("Hola");
+    }
 }
