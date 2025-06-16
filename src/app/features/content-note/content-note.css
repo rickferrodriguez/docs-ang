@@ -5,3 +5,19 @@
 button {
     background-color: lightsteelblue;
 }
+
+.content {
+    background-color: lightslategray;
+    display: grid;
+    gap: 0.2rem;
+}
+
+.champ-select {
+    padding: 1rem;
+    background-color: gainsboro;
+    display: grid;
+}
+
+h1 {
+    font-size: 2rem;
+}

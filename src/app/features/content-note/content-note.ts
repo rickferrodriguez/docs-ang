@@ -19,12 +19,16 @@ export class ContentNoteComponent {
     inputValue = signal("");
     isValid = signal(false);
 
-    handleClick() {
+    changeStatusButton() {
         this.buttonName.set("Presionado y deshabilitado");
         this.isValid.set(true);
     }
 
-    handleChange(e: any) {
+    changeInputValue(e: any) {
         this.inputValue.set(e.target.value);
+    }
+
+    showKeypressed(e: KeyboardEvent) {
+        console.log(e);
     }
 }

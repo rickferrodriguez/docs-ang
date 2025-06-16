@@ -1,9 +1,10 @@
-<section>
+<section class="content">
+    <h1>Esto es el contenido</h1>
     <p>{{ buttonName() }}</p>
     <button
         [class.isDisabled]="isValid()"
         [disabled]="isValid()"
-        (click)="handleClick()">
+        (click)="changeStatusButton()">
         Cambiar tag
     </button>
     @if (inputValue() === "") {
@@ -16,7 +17,12 @@
         name="texto"
         id="texto"
         [value]="inputValue()"
-        (input)="handleChange($event)" />
+        (input)="changeInputValue($event)" />
+    <section class="champ-select" (keydown)="showKeypressed($event)">
+        <h2>Champ select</h2>
+        <input type="champ1">
+        <input type="champ2">
+    </section>
     <ul>
         @for (item of notes; track item.id) {
             <li>{{ item.title }}</li>
