@@ -1,6 +1,5 @@
 import { Component, effect, Inject } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
-import { ContentNoteComponent } from "./features/content-note/content-note";
 import { API_TOKEN, ApiToken } from "./app.config";
 import { UserData } from "./core/services/user-data";
 import { ResUserData } from "./core/user.model";
@@ -12,13 +11,7 @@ const apiToken: ApiToken = { url: "https://rickfer.com" };
 
 @Component({
     selector: "app-root",
-    imports: [
-        RouterOutlet,
-        ContentNoteComponent,
-        AsyncPipe,
-        FormsModule,
-        ReactiveFormsModule,
-    ],
+    imports: [RouterOutlet, AsyncPipe, FormsModule, ReactiveFormsModule],
     providers: [{ provide: API_TOKEN, useValue: apiToken }],
     templateUrl: "./app.html",
     styleUrl: "./app.css",

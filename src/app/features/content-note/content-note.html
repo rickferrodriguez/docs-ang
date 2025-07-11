@@ -5,7 +5,7 @@
         [class.isDisabled]="isValid()"
         [disabled]="isValid()"
         (click)="changeStatusButton()">
-        Cambiar tag
+        Cambiar tag Nuevo
     </button>
     @if (inputValue() === "") {
         <p>No hay nada todavía</p>
@@ -20,8 +20,8 @@
         (input)="changeInputValue($event)" />
     <section class="champ-select" (keydown)="showKeypressed($event)">
         <h2>Champ select</h2>
-        <input type="champ1">
-        <input type="champ2">
+        <input type="champ1" />
+        <input type="champ2" />
     </section>
     <ul>
         @for (item of notes; track item.id) {
